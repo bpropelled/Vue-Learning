@@ -52,12 +52,12 @@ new Vue ({
 
 >**NOTE: When using data binding inside attribute tags like ID, CLASS or HREF, you will need to use "v-bind" or the colon shorthand like this**
 ```html
-  <!-- NOT ALLOWED FOR ATTR  -->
-                    <a href=" {{ url }}" class="btn btn-lg btn-primary">Go to Google</a>
-                    <!-- Using Vue tags as an elements attribute - use v-bind or the colon shorthand like below -->
-                   <a v-bind:href=" url " class="btn btn-lg btn-primary">Go to Google</a>
-                    <!-- OR  -->
-                   <a :href=" url " class="btn btn-lg btn-primary">Go to Google</a>
-                   <!-- OR you can mess it with like so by appending to the attr like using normal js  -->
-                   <a :href=" url + '?test=testies' " class="btn btn-lg btn-primary">Go to Google</a>
+<!-- NOT ALLOWED FOR ATTR  -->
+    <a href=" {{ url }}" class="btn btn-lg btn-primary">Go to Google</a>
+<!-- Using Vue tags as an elements attribute - use v-bind or the colon shorthand like below -->
+    <a v-bind:href=" url " class="btn btn-lg btn-primary">Go to Google</a>
+<!-- OR  -->
+    <a :href=" url " class="btn btn-lg btn-primary">Go to Google</a>
+<!-- OR you can mess it with like so by appending to the attr like using normal js  -->
+    <a :href=" url + '?test=testies' " class="btn btn-lg btn-primary">Go to Google</a>
 ```
