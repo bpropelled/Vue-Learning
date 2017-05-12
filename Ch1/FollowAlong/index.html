@@ -3,20 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Vue Chapter 1</title>
-    <script src="https://unpkg.com/vue"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="https://unpkg.com/vue"></script>  
 </head>
 <body>
    <div id="app">
-       <h1>{{ msg }}</h1>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1>{{ msg }}</h1>
+<!-- NOT ALLOWED FOR ATTR  -->
+<a href=" {{ url }}" class="btn btn-lg btn-primary">Go to Google</a>
+<!--           Using Vue tags as an elements attribute - use v-bind or the colon shorthand like below -->
+                   <a :href=" url " class="btn btn-lg btn-primary">Go to Google</a>
+                  
+              </div>
+          </div>
+      </div>
+       
    </div>
-    
+   
+   
+ 
+     
 <script>
-  
     //Simlpe way to include view
     new Vue({
         el: '#app',
         data: {
-            msg: "Hello Granite Homes"
+            msg: "Hello Granite Homes",
+            url: 'https://google.ca'
         }
     });
     

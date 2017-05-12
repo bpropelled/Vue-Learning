@@ -7,6 +7,7 @@ this is the file for keeping tracks of the notes for learning vue from Lynda
 <script src="https://unpkg.com/vue"></script>
 ```
 - This will install the latest version of vue
+>**If you declre the Vue file at the top of the document you will not get the side effect of showing the string interpolation when the page loads.  When you throw this file at the end of the document like normal js files, you will get a brief flashing of raw elements before Vue updates the dom**
 
 ## Using it in a project
 - The simplest form of adding vue to a project would involve
@@ -47,4 +48,16 @@ new Vue ({
         url: 'https://www.google.ca'
     }
 });
+```
+
+>**NOTE: When using data binding inside attribute tags like ID, CLASS or HREF, you will need to use "v-bind" or the colon shorthand like this**
+```html
+  <!-- NOT ALLOWED FOR ATTR  -->
+                    <a href=" {{ url }}" class="btn btn-lg btn-primary">Go to Google</a>
+                    <!-- Using Vue tags as an elements attribute - use v-bind or the colon shorthand like below -->
+                   <a v-bind:href=" url " class="btn btn-lg btn-primary">Go to Google</a>
+                    <!-- OR  -->
+                   <a :href=" url " class="btn btn-lg btn-primary">Go to Google</a>
+                   <!-- OR you can mess it with like so by appending to the attr like using normal js  -->
+                   <a :href=" url + '?test=testies' " class="btn btn-lg btn-primary">Go to Google</a>
 ```
