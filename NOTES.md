@@ -20,6 +20,7 @@ this is the file for keeping tracks of the notes for learning vue from Lynda
 new Vue ({
   //1 add an element to the vue object
   el: '#app',
+  //Add some data
   data: {
         message: "This is a sample message"
   }
@@ -32,3 +33,18 @@ new Vue ({
 ## Data Binding in Vue
 > Data binding is the process that establishes a connection between the application UI and business logic. If the binding has the correct settings and the data provides the proper notifications, then, when the data changes its value, the elements that are bound to the data reflect changes automatically.
 
+#### What is "String Interpolation"
+>String interpolation is used to bind data to an element dynamically like show above using the template tags **{{ message }}**
+
+A good exmaple of using this is to dynamically add a SRC tag to an element
+```html
+<a id="app" href="{{ url }}"></a>
+```
+```javascript
+new Vue ({
+    el: '#app',
+    data: {
+        url: 'https://www.google.ca'
+    }
+});
+```
