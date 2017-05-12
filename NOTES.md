@@ -25,9 +25,10 @@ new Vue ({
   }
 });
 ```
-### Note: If the double curly braces are not your thing, then you can create your own custom DELIMITERS.  For more info on Vue Delimiters, visit  https://vuejs.org/v2/api/#delimiters
+>**Note: If the double curly braces are not your thing, then you can create your own custom DELIMITERS.  For more info on Vue Delimiters, visit  https://vuejs.org/v2/api/#delimiters**
 
-### Note : Vue is interpreted from Top to Bottom so make sure that the html element is declared BEFORE the Vue instance is created.
+>**Note : Vue is interpreted from Top to Bottom so make sure that the html element is declared BEFORE the Vue instance is created.**
 
 ## Data Binding in Vue
 > Data binding is the process that establishes a connection between the application UI and business logic. If the binding has the correct settings and the data provides the proper notifications, then, when the data changes its value, the elements that are bound to the data reflect changes automatically.
+
