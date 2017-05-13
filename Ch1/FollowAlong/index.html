@@ -12,11 +12,15 @@
           <div class="row">
               <div class="col-lg-12">
                   <h1>{{ msg }}</h1>
-<!-- NOT ALLOWED FOR ATTR  -->
-<a href=" {{ url }}" class="btn btn-lg btn-primary">Go to Google</a>
-<!--           Using Vue tags as an elements attribute - use v-bind or the colon shorthand like below -->
+                    <!-- NOT ALLOWED FOR ATTR  -->
+                    <a href=" {{ url }}" class="btn btn-lg btn-primary">Go to Google</a>
+                    <!-- Using Vue tags as an elements attribute - use v-bind or the colon shorthand like below -->
+                   <a v-bind:href=" url " class="btn btn-lg btn-primary">Go to Google</a>
+                    <!-- OR  -->
                    <a :href=" url " class="btn btn-lg btn-primary">Go to Google</a>
                   
+                <!--Now lets do some two way stuff-->
+                    <input type="text" >
               </div>
           </div>
       </div>
@@ -28,7 +32,7 @@
      
 <script>
     //Simlpe way to include view
-    new Vue({
+    var app = new Vue({
         el: '#app',
         data: {
             msg: "Hello Granite Homes",
